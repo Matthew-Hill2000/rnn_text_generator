@@ -1,0 +1,38 @@
+{
+    "data": {
+        "text_path": "text_data/war_and_peace.txt",
+        "tokenization_mode": "char",
+        "num_steps": 32,
+        "train_val_test_split": [
+            0.6,
+            0.2,
+            0.2
+        ],
+        "preprocessors": [
+            "lowercase",
+            "remove_punctuation",
+            "remove_extra_whitespace"
+        ]
+    },
+    "model": {
+        "type": "RNN",
+        "hidden_dim": 512,
+        "layer_dim": 1,
+        "dropout": 0.4,
+        "pretrained_path": "models/trained_model.pth"
+    },
+    "training": {
+        "train": true,
+        "batch_size": 512,
+        "learning_rate": 0.01,
+        "num_epochs": 7
+    },
+    "generation": {
+        "generate": true,
+        "prefix": "War of the Worlds",
+        "num_predictions": 50
+    },
+    "logging": {
+        "tensorboard_log_dir": "runs"
+    }
+}

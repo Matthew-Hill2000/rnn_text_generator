@@ -1,0 +1,26 @@
+{
+    "data": {
+        "text_path": "text_data/war_and_peace.txt",
+        "tokenization_mode": "char",
+        "num_steps": 32,
+        "train_val_test_split": [
+            0.6,
+            0.2,
+            0.2
+        ]
+    },
+    "model": {
+        "type": "RNN",
+        "hidden_dim": 2048,
+        "layer_dim": 4,
+        "dropout": 0.75
+    },
+    "training": {
+        "train": "True",
+        "batch_size": 1024,
+        "learning_rate": 0.005,
+        "num_epochs": 200,
+        "save_model": true,
+        "save_path": "models/trained_model.pth"
+    }
+}
